@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.6",
-          "Swashbuckle.AspNetCore": "6.3.0"
+          "Swashbuckle.AspNetCore": "6.3.0",
+          "System.Linq.Dynamic.Core": "1.2.19"
         },
         "runtime": {
           "WorldCitiesAPI.dll": {}
@@ -1922,6 +1923,14 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
+      "System.Linq.Dynamic.Core/1.2.19": {
+        "runtime": {
+          "lib/net6.0/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.19.0",
+            "fileVersion": "1.2.19.0"
+          }
+        }
+      },
       "System.Linq.Expressions/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3433,6 +3442,13 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.2.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R9Iv6uDZQLDecHhBANawccBzm5H6lHTKL65zPfulHBBpeT7NktzLcxA0MfffWsTjCzSo106Vy5QtkwXnlfekJQ==",
+      "path": "system.linq.dynamic.core/1.2.19",
+      "hashPath": "system.linq.dynamic.core.1.2.19.nupkg.sha512"
     },
     "System.Linq.Expressions/4.3.0": {
       "type": "package",
