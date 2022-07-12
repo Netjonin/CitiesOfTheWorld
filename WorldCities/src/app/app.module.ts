@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { CitiesComponent } from './components/cities/cities.component';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+import { CountriesComponent } from './components/countries/countries.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavMenuComponent,
-    CitiesComponent
+    CitiesComponent,
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
