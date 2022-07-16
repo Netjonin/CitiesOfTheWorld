@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +11,7 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { CitiesComponent } from './components/cities/cities.component';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 import { CountriesComponent } from './components/countries/countries.component';
+import { CityEditComponent } from './components/cities/city-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,16 @@ import { CountriesComponent } from './components/countries/countries.component';
     HomeComponent,
     NavMenuComponent,
     CitiesComponent,
-    CountriesComponent
+    CountriesComponent,
+    CityEditComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
