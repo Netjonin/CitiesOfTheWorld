@@ -4,6 +4,7 @@ import { HomeComponent } from '../../components/home/home.component';
 import { CitiesComponent } from '../../components/cities/cities.component';
 import { CityEditComponent } from '../../components/cities/city-edit.component';
 import { CountriesComponent } from '../../components/countries/countries.component';
+import { CountryEditComponent } from '../../components/countries/country-edit.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'cities', component: CitiesComponent },
   { path: 'countries', component: CountriesComponent },
   { path: 'city/:id', component: CityEditComponent },
-  { path: 'city', component: CityEditComponent}
+  { path: 'city', component: CityEditComponent },
+  { path: 'country/:id', component: CountryEditComponent },
+  { path: 'country', component: CountryEditComponent }
 ];
 
 @NgModule({
