@@ -3,6 +3,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from './../../../environments/environment';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+
 import { MatSort } from '@angular/material/sort';
 import { Country } from './country';
 
@@ -23,12 +26,25 @@ export class CountriesComponent implements OnInit {
   filterQuery?: string;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  filterTextChanged: Subject<string> = new Subject<string>();
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
     this.loadData();
+  }
+
+  // debounce filter text changes
+  onFilterTextChanged(filterText: string) {
+    if (this.filterTextChanged.observers.length === 0) {
+      this.filterTextChanged
+        .pipe(debounceTime(1000), distinctUntilChanged())
+        .subscribe(query => {
+          this.loadData(query);
+        });
+    }
+    this.filterTextChanged.next(filterText);
   }
 
   loadData(query?: string) {
@@ -38,6 +54,7 @@ export class CountriesComponent implements OnInit {
     this.filterQuery = query;
     this.getData(pageEvent);
   }
+
 
   getData(event: PageEvent) {
     var url = environment.baseUrl + 'api/Countries';
